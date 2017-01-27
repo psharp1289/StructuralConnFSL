@@ -2,18 +2,18 @@
 
 These set of scripts comprise a structural connecotme pipeline.
 
-The higher-level pipeline file which calls all sub-scripts is called "proc_fsl_connectome.sh"
+The higher-level pipeline file which calls all sub-scripts is called "proc_fsl_connectome.sh" After changing the variables in the appropriate .cfg files, you can run this pipeline by typing "./proc_fsl_connectom.sh" in your bash terminal. 
 
 REQUIRED PACKAGES:
 
-1. Nipype
-2. FSL
-3. Freesurfer
+1. Nipype (to get, execute in bash: pip install nipype)
+2. FSL (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki)
+3. Freesurfer (http://freesurfer.net/fswiki/FreeSurferWiki)
 
 *ALL* that needs to be changed in order to run this pipeline in your data is to amend the config and subjects.txt files appropriately.
 
 1. Subjects.txt includes one subject per line.
-2. Connectome_variables.cfg: this allows you to parse the brain in any way, as long as you have the correct total parcellation number, labels file, and accompanying freesurfer .mgz parcellated file. Future versions of this pipeline will expand usage to other parcellation schemes, such as AAL of the HUman Connectome Project multimodal map. Currently, this can be worked in with few changes (really just amending the registration of the atlas-space to native diffuson space steps which are currently specific to freesurfer). 
+2. Connectome_variables.cfg: this allows you to parse the brain in any way, as long as you have the correct total parcellation number, labels file, and accompanying freesurfer .mgz parcellated file. Future versions of this pipeline will expand usage to other parcellation schemes, such as AAL of the Human Connectome Project multimodal map. Currently, this can be worked in with few changes (really just amending the registration of the atlas-space to native diffuson space steps which are currently specific to freesurfer). 
 
 
 This scripts ASSUMES you have run freesurfer recon-all on your subjects T1 images.
