@@ -35,9 +35,8 @@ with open('masks.txt', 'w') as f:
 
 ROI_volumes_csv=[]
 
-#create each ROI niftii file
-for index in range(parcellation_num):           # index goes 1:68
-	# print 'Region Number {}'.format(index+1)
+#extract each ROI from freesurfer parcellation and save niftii file
+for index in range(parcellation_num): 
 	x = Freesurfer_Regions_dict[Freesurfer_Regions_list[index]]    
 	get_ROI = fsl.maths.Threshold()
 	get_ROI.inputs.in_file = 'FS_to_DTI.nii.gz'
@@ -46,7 +45,7 @@ for index in range(parcellation_num):           # index goes 1:68
 	get_ROI.inputs.out_file = '{}.nii.gz'.format(Freesurfer_Regions_list[index])
 	get_ROI.run()
 
-	#get volume
+	#get volume of each ROI in native diffusion space
 	current_ROI_file='{}.nii.gz'.format(Freesurfer_Regions_list[index])
 	get_volume_ROI = fsl.ImageStats(in_file=current_ROI_file, op_string='-V > ROI_volumes.txt')
 	get_volume_ROI.run()
