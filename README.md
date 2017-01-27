@@ -10,7 +10,7 @@ REQUIRED PACKAGES:
 2. FSL (https://fsl.fmrib.ox.ac.uk/fsl/fslwiki)
 3. Freesurfer (http://freesurfer.net/fswiki/FreeSurferWiki)
 
-*ALL* that needs to be changed in order to run this pipeline in your data is to amend the config and subjects.txt files appropriately.
+*ALL* that needs to be changed in order to run this pipeline on your data is to amend the .cfg and subjects.txt files.
 
 1. Subjects.txt includes one subject per line.
 2. Connectome_variables.cfg: this allows you to parse the brain in any way, as long as you have the correct total parcellation number, labels file, and accompanying freesurfer .mgz parcellated file. Future versions of this pipeline will expand usage to other parcellation schemes, such as AAL of the Human Connectome Project multimodal map. Currently, this can be worked in with few changes (really just amending the registration of the atlas-space to native diffuson space steps which are currently specific to freesurfer). 
