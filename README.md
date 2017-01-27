@@ -13,7 +13,7 @@ REQUIRED PACKAGES:
 *ALL* that needs to be changed in order to run this pipeline in your data is to amend the config and subjects.txt files appropriately.
 
 1. Subjects.txt includes one subject per line.
-2. Connectome_variables.cfg: this allows you to parse the brain in any way, as long as you have the appropriate parcellation numbers, labels file, and accompanying freesurfer .mgz parcellated file. Future versions of this pipeline will expand usage to AAL labelling, which can be worked in with few changes (really just amending the registration of the atlas-space to native diffuson space steps which are currently specific to freesurfer). 
+2. Connectome_variables.cfg: this allows you to parse the brain in any way, as long as you have the correct total parcellation number, labels file, and accompanying freesurfer .mgz parcellated file. Future versions of this pipeline will expand usage to other parcellation schemes, such as AAL of the HUman Connectome Project multimodal map. Currently, this can be worked in with few changes (really just amending the registration of the atlas-space to native diffuson space steps which are currently specific to freesurfer). 
 
 
 This scripts ASSUMES you have run freesurfer recon-all on your subjects T1 images.
