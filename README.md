@@ -14,5 +14,13 @@ REQUIRED PACKAGES:
 
 
 This scripts ASSUMES you have run freesurfer recon-all on your subjects T1 images.
-  - IF YOU HAVEN'T RUN FREESURFER:
+ 
+IF YOU HAVEN'T RUN FREESURFER:
+There are 2 Files in this set of scripts to run freesurfer on T1 data: 
+1. freesurfer_recon_all.py
+2. freesurfer_variables.cfg
+
+NOTE the freesurfer python file requires subject folders to be within the T1 location directory. 
+
+
   
