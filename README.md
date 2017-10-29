@@ -1,6 +1,6 @@
 # StructuralConnFSL: A pipeline for structural connectome reconstruction from diffusion-weighted data. 
 
-These set of scripts comprise a structural connecotme pipeline.
+This set of scripts is designed to reconstruct structural connectomes from diffusion-weighted data in a user-friendly fashion.
 
 The higher-level pipeline file which calls all sub-scripts is called "proc_fsl_connectome.sh" After changing the variables in the appropriate .cfg files, you can run this pipeline by typing "./proc_fsl_connectom.sh" in your bash terminal. 
 
